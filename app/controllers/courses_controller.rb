@@ -16,7 +16,7 @@ class CoursesController < ApplicationController
     @course = Course.new(course_params)
     @course.user = current_user
     if @course.save
-      flash[:notice] = "C'est bien noté ;)"
+      flash[:notice] = "Merci ! C'est bien noté."
       redirect_to course_path(@course)
     else
       flash[:alert] = "Aïe, cela n'a pas fonctionné."

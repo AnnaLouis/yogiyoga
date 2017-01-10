@@ -7,13 +7,26 @@
   <!-- Right Navigation -->
   <div class="navbar-right hidden-xs hidden-sm">
 
-    <!-- Search form -->
-    <form action="" class="navbar-search">
+    <!-- Je cherche Je trouve -->
+    <div class="option1">
+    <p>
+    <%= link_to "Je cherche un cours", courses_path %>
+    </p>
+    </div>
+
+    <div class="option2">
+    <p>
+    <%= link_to "Je propose un cours", new_course_path %>
+    </p>
+    </div>
+
+
+<!--     <form action="" class="navbar-search">
       <input type="text" class="navbar-search-input" placeholder="Search something">
       <button type="submit" class="navbar-search-btn">
         <i class="fa fa-search"></i>
       </button>
-    </form>
+    </form> -->
 
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
@@ -53,7 +66,7 @@
     <% else %>
 
       <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-item navbar-link" %>
+      <%= link_to t(".sign_in", default: "Inscription"), new_user_session_path, class: "navbar-item navbar-link" %>
 
     <% end %>
 
