@@ -1,0 +1,8 @@
+<h1> Tous les cours </h1>
+
+<% @courses.each do |course| %>
+  <%= course.name %>
+  <%= course.date %>
+  <%= course.price %>
+  <%= course.address %>
+<% end %>
